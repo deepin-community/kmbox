@@ -1,0 +1,42 @@
+Source: kmbox
+Section: libs
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Norbert Preining <norbert@preining.info>,
+           Sandro Knauß <hefee@debian.org>,
+Build-Depends: cmake (>= 3.16~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.83.0~),
+               libkf5mime-dev (>= 21.08.1~),
+               pkg-kde-tools (>> 0.15.15),
+               qtbase5-dev,
+Standards-Version: 4.6.0
+Homepage: https://invent.kde.org/pim/kmbox
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kmbox
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kmbox.git
+Rules-Requires-Root: no
+
+Package: libkf5mbox-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libkf5mbox5 (= ${binary:Version}),
+         libkf5mime-dev (>= 21.08.1~),
+         qtbase5-dev,
+         ${misc:Depends},
+Description: library for handling mbox mailboxes - development files
+ This is a library for handling mailboxes in mbox format, using a Qt/KMime C++
+ API.
+ .
+ This package contains the development files.
+
+Package: libkf5mbox5
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library for handling mbox mailboxes
+ This is a library for handling mailboxes in mbox format, using a Qt/KMime C++
+ API.
+ .
+ This package is part of the KDE Development Platform PIM libraries module.
+Provides: ${ABI:VirtualPackage}

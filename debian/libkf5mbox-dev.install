@@ -1,0 +1,5 @@
+usr/include/KF5/KMbox/
+usr/include/KF5/kmbox_version.h
+usr/lib/*/cmake/KF5Mbox/
+usr/lib/*/libKF5Mbox.so
+usr/lib/*/qt5/mkspecs/modules/qt_KMbox.pri
